@@ -1,0 +1,28 @@
+{
+  "name": "ibots-orchestrator",
+  "version": "1.0.0",
+  "description": "Automated Workflow & Bot Task Orchestrator (MERN + Vercel Serverless Crons)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/src/index.js",
+    "dev:all": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "seed": "node server/src/seed.js",
+    "start": "node server/src/index.js"
+  },
+  "keywords": ["mern", "workflow", "orchestrator", "cron", "vercel", "mongodb"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "morgan": "^1.10.0"
+  }
+}
